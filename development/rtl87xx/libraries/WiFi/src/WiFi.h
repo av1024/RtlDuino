@@ -262,9 +262,9 @@ public:
      */
     int hostByName(const char* aHostname, IPAddress& aResult);
 
-	int apbegin(const char* ssid, char* channel);
+  int apbegin(const char* ssid, const char* channel);
 
-	int apbegin(const char* ssid, char* password, char* channel);
+  int apbegin(const char* ssid, const char* password, const char* channel);
 
 	int SetDTIM(uint8_t dtn = 1);
 

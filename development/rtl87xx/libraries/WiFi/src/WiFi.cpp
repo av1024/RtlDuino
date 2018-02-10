@@ -194,7 +194,7 @@ int WiFiClass::hostByName(const char* aHostname, IPAddress& aResult)
 	return WiFiDrv::getHostByName(aHostname, aResult);
 }
 
-int WiFiClass::apbegin(const char* ssid, char* channel)
+int WiFiClass::apbegin(const char* ssid, const char* channel)
 {
 	uint8_t status = WL_IDLE_STATUS;
 
@@ -213,7 +213,7 @@ int WiFiClass::apbegin(const char* ssid, char* channel)
     return status;
 }
 
-int WiFiClass::apbegin(const char* ssid, char* password, char* channel)
+int WiFiClass::apbegin(const char* ssid, const char* password, const char* channel)
 {
 	uint8_t status = WL_IDLE_STATUS;
 

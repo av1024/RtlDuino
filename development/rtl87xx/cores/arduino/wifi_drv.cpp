@@ -207,6 +207,28 @@ int8_t WiFiDrv::wifiSetKey(const char* ssid, uint8_t ssid_len, uint8_t key_idx, 
 }
 
 //TODO: config()
+/* Set ip configuration disabling dhcp client
+    *
+    * param validParams: set the number of parameters that we want to change
+    * 					 i.e. validParams = 1 means that we'll change only ip address
+    * 					 	  validParams = 3 means that we'll change ip address, gateway and netmask
+    * param local_ip: 	Static ip configuration
+    * param gateway: 	Static gateway configuration
+    * param subnet: 	Static subnet mask configuration
+    */
+/*
+static void WiFiDrv::config(uint8_t validParams, uint32_t local_ip, uint32_t gateway, uint32_t subnet) {
+  switch(validParams) {
+    case 3:
+      //set subnet, no break
+    case 2:
+      //set gw, no break
+    case 1:
+      // set ip
+      break;
+  }
+}
+*/
 
 void WiFiDrv::setDNS(uint8_t validParams, uint32_t dns_server1, uint32_t dns_server2) {
   //LwIP_SetDNS(); // dns0
