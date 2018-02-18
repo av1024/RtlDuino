@@ -119,7 +119,7 @@ int HALOTPOneByteWriteRAM(IN unsigned int CtrlSetting, IN unsigned short Addr, I
 }
 
 //----- HALEFUSEOneByteReadRAM
-int HALEFUSEOneByteReadRAM(IN unsigned int CtrlSetting, IN unsigned short Addr, IN unsigned char *Data, IN unsigned char L25OutVoltage)
+u32 HALEFUSEOneByteReadRAM(IN u32 CtrlSetting, IN u16 Addr, IN u8 *Data, IN u8 L25OutVoltage)
 {
 	int result;
 
@@ -136,7 +136,7 @@ int HALEFUSEOneByteReadRAM(IN unsigned int CtrlSetting, IN unsigned short Addr, 
 }
 
 //----- HALEFUSEOneByteWriteRAM
-int HALEFUSEOneByteWriteRAM(IN unsigned int CtrlSetting, IN unsigned short Addr, IN unsigned char Data, IN unsigned char L25OutVoltage)
+u32 HALEFUSEOneByteWriteRAM(IN u32 CtrlSetting, IN u16 Addr, IN u8 Data, IN u8 L25OutVoltage)
 {
 #if EFUSE_WRITE_ENABLE
 	int result;
