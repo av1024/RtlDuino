@@ -106,8 +106,8 @@ byte SPIClass::transfer(uint8_t _data, SPITransferMode _mode)
 {
     return transfer(pinSS, _data, _mode);
 }
-/*
-void SPIClass::transfer(byte _pin, void *_buf, size_t _count, SPITransferMode _mode)
+
+void SPIClass::write(byte _pin, const void *_buf, size_t _count, SPITransferMode _mode)
 {
     if (_pin != pinSS) {
         pinMode(_pin, OUTPUT);
@@ -122,7 +122,11 @@ void SPIClass::transfer(byte _pin, void *_buf, size_t _count, SPITransferMode _m
         digitalWrite(_pin, 1);
     }
 }
-*/
+
+void SPIClass::write(const void *_buf, size_t _count, SPITransferMode _mode) {
+    write(pinSS, _buf, _count, _mode);
+}
+
 
 void SPIClass::transfer(byte _pin, void *_buf, size_t _count, SPITransferMode _mode)
 {

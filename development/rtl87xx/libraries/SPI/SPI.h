@@ -71,6 +71,8 @@ public:
     byte transfer(uint8_t _data, SPITransferMode _mode = SPI_LAST);
 
     void transfer(byte _pin, void *_buf, size_t _count, SPITransferMode _mode = SPI_LAST);
+        void write(byte _pin, const void *_buf, size_t _count, SPITransferMode _mode = SPI_LAST);
+        void write(const void *_buf, size_t _count, SPITransferMode _mode = SPI_LAST);
     void transfer(void *_buf, size_t _count, SPITransferMode _mode = SPI_LAST);
 
 		void transferDMA(byte _pin, void *_buf, size_t _count, SPITransferMode _mode = SPI_LAST);
